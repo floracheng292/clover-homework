@@ -1,10 +1,40 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
+import { getBackpack, getToolkit } from './utils/fetchData';
+
+type Toolkit = {id: string; name:string};
+type Backpack = {id: string; name:string};
 
 function App() {
+  const [toolkitlist, setToolkit] = useState<Toolkit[]>([]);
+  const [backpacklist, setBackpack] = useState<Backpack[]>([]);
+
+  useEffect(() => {
+    getToolkit().then(data => setToolkit(data));
+    (async () => {
+      const backpackData = await getBackpack();
+      setBackpack(backpackData);
+    })();
+  }, []);
+
   return (
     <div className="App">
-      <p>Hello there</p>
+      <div>
+        <h1>Toolkit</h1>
+        <ul>
+          {toolkitlist.map(tool => (
+            <li key={tool.id}>{tool.name}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h1>Backpack</h1>
+        <ul>
+          {backpacklist.map(item => (
+            <li key={item.id}>{item.name}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
