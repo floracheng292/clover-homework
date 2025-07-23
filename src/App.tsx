@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { getBackpack, getToolkit } from './utils/fetchData';
+import Header from '@skyscanner-internal/global-components/header';
+import { logError, logOperationalEvent, logWarn } from 'saddlebag-logger';
+import { getHeaderStrings } from './utils/getHeaderStrings';
 
 type Toolkit = {id: string; name:string};
 type Backpack = {id: string; name:string};
@@ -19,6 +22,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header isProductionEnv={false} logger={{logOperationalEvent, logError, logWarn}} strings={getHeaderStrings}/>
       <div>
         <h1>Toolkit</h1>
         <ul>
