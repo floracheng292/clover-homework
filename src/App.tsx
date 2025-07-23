@@ -4,7 +4,6 @@ import { getBackpack, getToolkit } from './utils/fetchData';
 import Header from '@skyscanner-internal/global-components/header';
 import { logError, logOperationalEvent, logWarn } from 'saddlebag-logger';
 import { getHeaderStrings } from './utils/getHeaderStrings';
-import { BpkList, BpkListItem } from '@skyscanner/backpack-web/bpk-component-list';
 import BpkText, { TEXT_STYLES } from '@skyscanner/backpack-web/bpk-component-text';
 
 
@@ -26,21 +25,35 @@ function App() {
   return (
     <div className="App">
       <Header isProductionEnv={false} logger={{logOperationalEvent, logError, logWarn}} strings={getHeaderStrings}/>
-      <div>
-        <BpkText tagName='p'>Toolkit</BpkText>
-        <BpkList>
+      <div className="layout-container">
+
+      <div className="toolkit-container">
+        <div className='toolkit-header'>
+          <BpkText tagName='p'>Toolkit</BpkText>
+        </div>
+
+        <div className="toolkit-list-container">
           {toolkitlist.map(tool => (
-            <BpkListItem key={tool.id}>{tool.name}</BpkListItem> 
+            <div className="item">
+              <BpkText key={tool.id}>{tool.name}</BpkText> 
+            </div>
           ))}
-        </BpkList>
+        </div>
       </div>
-      <div>
-        <BpkText tagName='p'>Backpack</BpkText>
-        <BpkList>
+
+      <div className="backpack-container">
+        <div className='backpack-header'>
+          <BpkText tagName='p'>Backpack</BpkText>
+        </div>
+
+        <div className="backpack-list-container">
           {backpacklist.map(item => (
-            <BpkListItem key={item.id}>{item.name}</BpkListItem> 
+            <div className="item">
+              <BpkText key={item.id}>{item.name}</BpkText> 
+            </div>
           ))}
-        </BpkList>
+        </div>
+      </div>
       </div>
     </div>
   );

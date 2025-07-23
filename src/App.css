@@ -1,0 +1,38 @@
+.layout-container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    margin-top: 1rem;
+}
+
+.toolkit-container {
+    width: 20rem;
+    height: 15rem;
+    border: 1px solid black;
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+.backpack-container {
+    width: 20rem;
+    border: 1px solid black;
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+.toolkit-list-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.backpack-list-container {
+    display: grid;;
+}
+
+.item {
+    text-align: center;
+    border: 1px solid black;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.toolkit-header, .backpack-header {
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
