@@ -1,21 +1,22 @@
 .layout-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 15rem;
     border: 1px solid black;
-    margin-top: 1rem;
+    margin: 1rem 0.5rem 0.5rem 0.5rem;
 }
 
 .toolkit-container {
     width: 20rem;
     height: 15rem;
     border: 1px solid black;
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem;
 }
 
 .backpack-container {
     width: 20rem;
     border: 1px solid black;
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem;
 }
 
 .toolkit-list-container {
@@ -24,15 +25,15 @@
 }
 
 .backpack-list-container {
-    display: grid;;
+    display: grid;
 }
 
 .item {
     text-align: center;
     border: 1px solid black;
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin: 0.5rem;
 }
 
 .toolkit-header, .backpack-header {
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin: 0.5rem;
 }

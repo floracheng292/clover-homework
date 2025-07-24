@@ -1,17 +1,17 @@
 import { headerStringMap } from '@skyscanner-internal/global-components/header/helpers/string-mapper';
 
 const headerData: Record<string, string> = {
-  carHire: "Car Hire",
+  car_hire: "Car Hire",
   flights: "Flights",
-  helpAnchorText: "Help",
+  help_anchor_text: "Help",
   hotels: "Hotels",
   packages: "Packages",
   login: "Log in",
-  savedFlights: "Saved flights, hotels and cars",
-  skipToResults: "Skip to results",
-  userPreferences: "User preferences",
-  userAccount: "Account",
-  navigationTabs: "Navigation Tabs",
+  saved_flights: "Saved flights, hotels and cars",
+  skip_to_results: "Skip to results",
+  user_preferences: "User preferences",
+  user_account: "Account",
+  navigation_tabs: "Navigation Tabs",
 }
 
 
