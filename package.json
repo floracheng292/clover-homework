@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "browserslist-config-skyscanner": "^5.0.0",
-    "saddlebag-logger": "^5.0.7"
+    "saddlebag-logger": "^5.0.7",
+    "sass": "^1.89.2"
   }
 }
