@@ -6,7 +6,6 @@
     "@skyscanner-internal/global-components": "^10.26.2",
     "@skyscanner/backpack-web": "^37.11.0",
     "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
@@ -45,8 +44,24 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "babel-jest": "^30.0.5",
     "browserslist-config-skyscanner": "^5.0.0",
+    "identity-obj-proxy": "^3.0.0",
     "saddlebag-logger": "^5.0.7",
-    "sass": "^1.89.2"
+    "sass": "^1.89.2",
+    "ts-jest": "^29.4.0"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!bpk|@skyscanner|saddlebag)"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "identity-obj-proxy"
+    }
   }
 }

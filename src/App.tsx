@@ -9,8 +9,8 @@ import '@skyscanner/backpack-web/bpk-stylesheets';
 import '@skyscanner/backpack-web/bpk-stylesheets/font';
 
 
-type Toolkit = {id: string; name:string};
-type Backpack = {id: string; name:string};
+type Toolkit = { id: string; name: string };
+type Backpack = { id: string; name: string };
 
 function App() {
   const [toolkitlist, setToolkit] = useState<Toolkit[]>([]);
@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header isProductionEnv={false} logger={{logOperationalEvent, logError, logWarn}} strings={getHeaderStrings}/>
+      <Header isProductionEnv={false} logger={{ logOperationalEvent, logError, logWarn }} strings={getHeaderStrings} />
       <div className="layout-container">
 
         <div className="toolkit-container">
@@ -37,7 +37,7 @@ function App() {
           <div className="toolkit-list-container">
             {toolkitlist.map(tool => (
               <div className="item" key={tool.id}>
-                <BpkText key={tool.id}>{tool.name}</BpkText> 
+                <BpkText key={tool.id}>{tool.name}</BpkText>
               </div>
             ))}
           </div>
@@ -51,7 +51,7 @@ function App() {
           <div className="backpack-list-container">
             {backpacklist.map(item => (
               <div className="item" key={item.id}>
-                <BpkText key={item.id}>{item.name}</BpkText> 
+                <BpkText key={item.id}>{item.name}</BpkText>
               </div>
             ))}
           </div>
