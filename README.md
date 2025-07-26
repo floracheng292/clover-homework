@@ -10,11 +10,15 @@ This project is a React application with a simple Express backend.
 ## Getting Started
 
 #### Start the Backend
+`npm run back-end`
 The backend will run on [http://localhost:5000](http://localhost:5000).
 
 #### Start the Frontend
+`npm start`
 The frontend will run on [http://localhost:3000](http://localhost:3000).
 
+#### Start the test
+`npm test`
 
 ## API Endpoints
 
